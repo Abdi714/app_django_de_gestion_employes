@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h4>Liste des Departements</h4>
+    <hr>
+    <a href="{%url 'add_departement' %}" class="btn btn-sm btn-info">Ajouter un nouveau Departement</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom du departement</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in departement %}
+                <tr>
+                    <td>{{ s.id }}</td>
+                    <td>{{ s.nom_departement }}</td>
+                    <td>
+                        <a href="update_departement/{{s.id}}" class="btn btn-sm btn-info">Modifier</a>
+                        <a href="delete_departement/{{s.id}}" class="btn btn-sm btn-danger">Supprimer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock content %}

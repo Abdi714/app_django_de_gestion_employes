@@ -23,4 +23,8 @@ urlpatterns = [
     path('', views.details, name="details"),
     path('update/<int:id>', views.update, name='update'),
     path('delete/<int:id>', views.delete, name='delete'),
+    path('add_departement', views.addDepartement, name="add_departement"),
+    path('details_departement', views.detailsDepartemnt, name="details_departement"),
+    path('update_departement/<int:id>', views.updateDepartement, name='update_departement'),
+    path('delete_departement/<int:id>', views.deleteDepartement, name='delete_departement'),
 ]

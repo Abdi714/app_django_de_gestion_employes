@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h4>Ajout d'un nouveau departement</h4>
+    <hr><br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id">Nom</label>
+            <input type="text" class="form-control" name="nom_departement">
+        </div><br>
+        <div class="form-group">
+            <button class="btn btn-primary">Ajouter</button>
+            <a href="{% url 'details_departement' %}" class="btn btn-info">Details des departement</a>
+        </div>
+    </form>
+</div>
+{% endblock content %}
