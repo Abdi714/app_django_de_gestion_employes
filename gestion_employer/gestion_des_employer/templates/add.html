@@ -25,7 +25,16 @@
         <div class="form-group">
             <label for="id">Telephone</label>
             <input type="text" class="form-control" name="tel">
+        </div><br>
+        <div class="form-group">
+            <select class="form-select" aria-label="Default select example">
+                <option disabled="true" selected>Departements</option>
+                {% for dep in departement%}
+                <option>{{ dep.nom_departement }}</option>
+                {% endfor %}
+            </select>
         </div>
+
         <div class="form-group">
             <label for="id">Date d'Embauche</label>
             <input type="datetime" class="form-control" name="date_embauche">

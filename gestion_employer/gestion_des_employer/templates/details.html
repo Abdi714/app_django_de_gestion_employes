@@ -15,6 +15,7 @@
                 <th>Date de Naissance</th>
                 <th>Email</th>
                 <th>Telephone</th>
+                <th>Departements</th>
                 <th>Date d'embauche</th>
                 <th>Actions</th>
             </tr>
@@ -28,6 +29,7 @@
                     <td>{{ s.date_naissance }}</td>
                     <td>{{ s.email }}</td>
                     <td>{{ s.tel }}</td>
+                    <td>{{ dep.nom_departement }}</td>
                     <td>{{ s.date_embauche }}</td>
                     <td>
                         <a href="update/{{s.id}}" class="btn btn-sm btn-info">Modifier</a>

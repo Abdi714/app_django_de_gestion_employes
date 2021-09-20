@@ -9,7 +9,7 @@ from .models import Departement
 # Create your views here.
 def add(request):
     form = EmployerForm(request.POST or None)
-    #employer = Employer.objects.all()
+    employer = Employer.objects.all()
     if form.is_valid():
         form.save()
     return render(request, 'add.html', {'form': form})

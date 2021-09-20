@@ -28,6 +28,7 @@ class Migration(migrations.Migration):
                 ('date_naissance', models.DateField()),
                 ('email', models.CharField(max_length=50)),
                 ('tel', models.CharField(max_length=30)),
+                ('dep', models.CharField(max_length=50)),
                 ('date_embauche', models.DateTimeField(default=django.utils.timezone.now)),
             ],
         ),

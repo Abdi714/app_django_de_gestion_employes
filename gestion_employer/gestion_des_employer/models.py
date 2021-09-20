@@ -15,6 +15,8 @@ class Employer(models.Model):
 
 class Departement(models.Model):
     nom_departement = models.CharField(max_length=50)
+    class Meta:
+        db_table="gestion_des_employer_departement"
     
     def __str__(self):
         return self.nom_departement
